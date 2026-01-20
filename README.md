@@ -1,6 +1,6 @@
 # Q-Learning Based Vertical Handover Decision Algorithm (VHDA)
 
-**Author Mert - Electrical & Electronics Engineering Student**
+**Author** Mert - Electrical & Electronics Engineering Student
 
 ## Project Overview
 
