@@ -173,8 +173,8 @@ python -m pip install -r requirements.txt
 Note: Using python -m pip ensures that dependencies are installed for the same Python interpreter used to run the project.
 
 **Run the training script:**
-```bash
+```
 python src/run.py
-
+```
 
 The script will automatically start training the Q-learning based VHDA agent and display performance plots after training.
