@@ -139,32 +139,32 @@ This project demonstrates how **Reinforcement Learning can be effectively applie
 
 It serves as a strong foundation for **future extensions**, including deep RL, real-time deployment, and multi-RAT scenarios.
 
-How to Run
+**How to Run**
 
 This project requires Python 3.9+ and is recommended to be executed inside a virtual environment to ensure correct dependency resolution.
 
-Clone the repository:
+**Clone the repository:**
 
 git clone https://github.com/mertiodas/vhda.git
 cd vhda
 
 
-(Recommended) Create and activate a virtual environment:
+**(Recommended) Create and activate a virtual environment:**
 
 python -m venv venv
 
 
-Windows
+**Windows**
 
 venv\Scripts\activate
 
 
-Linux / macOS
+**Linux / macOS**
 
 source venv/bin/activate
 
 
-Install required dependencies:
+**Install required dependencies:**
 
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
@@ -172,7 +172,7 @@ python -m pip install -r requirements.txt
 
 Note: Using python -m pip ensures that dependencies are installed for the same Python interpreter used to run the project.
 
-Run the training script:
+**Run the training script:**
 
 python src/run.py
 
