@@ -144,10 +144,10 @@ It serves as a strong foundation for **future extensions**, including deep RL, r
 This project requires Python 3.9+ and is recommended to be executed inside a virtual environment to ensure correct dependency resolution.
 
 **Clone the repository:**
-```bash
+```
 git clone https://github.com/mertiodas/vhda.git
 cd vhda
-
+```
 
 **(Recommended) Create and activate a virtual environment:**
 ```bash
@@ -155,20 +155,20 @@ python -m venv venv
 
 
 **Windows**
-```bash
+```
 venv\Scripts\activate
-
+```
 
 **Linux / macOS**
-```bash
+```
 source venv/bin/activate
-
+```
 
 **Install required dependencies:**
-```bash
+```
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-
+```
 
 Note: Using python -m pip ensures that dependencies are installed for the same Python interpreter used to run the project.
 
