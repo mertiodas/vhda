@@ -1,16 +1,32 @@
-
 import numpy as np
 import pandas as pd
 import gymnasium as gym
 from gymnasium import spaces
+import os
 
 class VHDAEnv(gym.Env):
-    def __init__(self, csv_path="vhda_synthetic_normalized.csv", handover_penalty=0.35, throughput_weight=0.7, latency_weight=0.3):
+    def __init__(self,
+                 csv_path=None,
+                 handover_penalty=0.35,
+                 throughput_weight=0.7,
+                 latency_weight=0.3):
+
         super(VHDAEnv, self).__init__()
+
+        if csv_path is None:
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            csv_path = os.path.join(
+                base_dir,
+                "Datasets",
+                "vhda_synthetic_normalized.csv"
+            )
+
         self.data = pd.read_csv(csv_path)
+
         # Radio + QoS features in observation
         self.radio_features = self.data[['RSSI_WIFI', 'SINR_WIFI', 'RSRP_5G', 'SINR_5G']].values
         self.qos_features = self.data[['throughput_WIFI', 'latency_WIFI', 'throughput_5G', 'latency_5G']].values
+
         self.current_step = 0
         self.last_action = None
         self.handover_penalty = handover_penalty
@@ -18,9 +34,8 @@ class VHDAEnv(gym.Env):
         self.throughput_weight = throughput_weight
         self.latency_weight = latency_weight
 
-        # Obs: radio + QoS values (normalized 0-1)
         self.observation_space = spaces.Box(low=0, high=1, shape=(8,), dtype=np.float32)
-        self.action_space = spaces.Discrete(2)  # 0: WiFi, 1: 5G
+        self.action_space = spaces.Discrete(2)
 
         self.qos_improvement_count = 0
         self.unnecessary_handover_count = 0
