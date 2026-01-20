@@ -1,5 +1,7 @@
 # Q-Learning Based Vertical Handover Decision Algorithm (VHDA)
 
+** Author Mert - Electrical & Electronics Engineering Student **
+
 ## Project Overview
 
 This project implements a **Q-learning based Vertical Handover Decision Algorithm (VHDA)** designed for heterogeneous wireless networks such as **WiFi and 5G**, for heterogeneous wireless network users with mobility support.
