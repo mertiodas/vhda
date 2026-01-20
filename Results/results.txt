@@ -1,1 +1,1 @@
-
+The results demonstrate that the proposed Q-learning based Vertical Handover Decision Algorithm effectively learns a stable handover policy. By balancing QoS optimization and handover cost, the agent achieves higher overall performance and significantly reduces unnecessary handovers after training.
