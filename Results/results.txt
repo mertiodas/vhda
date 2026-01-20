@@ -1,1 +1,23 @@
-The results demonstrate that the proposed Q-learning based Vertical Handover Decision Algorithm effectively learns a stable handover policy. By balancing QoS optimization and handover cost, the agent achieves higher overall performance and significantly reduces unnecessary handovers after training.
+The results demonstrate that the proposed Q-learning based
+Vertical Handover Decision Algorithm (VHDA) effectively learns
+a stable handover policy.
+
+Key observations:
+- The agent improves cumulative reward over training.
+- Average QoS steadily increases across episodes.
+- Unnecessary (ping-pong) handovers are significantly reduced.
+
+By balancing QoS optimization and handover cost, the learned
+policy achieves higher overall performance and more stable
+handover behavior after training.
+
+====== FIRST vs LAST EPISODE COMPARISON ======
+500 Episodes,
+handover_penalty=0.35,
+throughput_weight=0.7,
+latency_weight=0.3),
+alpha=0.3, gamma=0.99, epsilon=1.0, epsilon_decay=0.995, epsilon_min=0.02,
+
+Reward: 852.168 -> 2282.910
+Avg QoS: 0.220 -> 0.273
+Unnecessary Handovers: 3061 -> 1316
